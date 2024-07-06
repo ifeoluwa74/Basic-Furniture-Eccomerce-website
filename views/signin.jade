@@ -1,0 +1,19 @@
+extends ./layout.jade
+
+block append content 
+    div.validation__container_for_signin
+        form.validation_C_for_signin(action="/shop", method="get") 
+            ul
+                li.Email.list_input 
+                    label(for="Email") Email* 
+                    input#Email.validation__input(type="text", name="Email" placeholder="Email") 
+                li.Password.list_input
+                    label(for="Password") Password* 
+                    input#Password.validation__input(type="password",name="Password" placeholder="Password")
+                li.SubmitBtn
+                    button.signInBtn
+                        img.signInLoadingGif(src="/images/ZZ5H.gif")
+                        div.signinText_C
+                            i.fa.fa-sign-in 
+                            p SignUp
+

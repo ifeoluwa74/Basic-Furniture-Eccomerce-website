@@ -1,0 +1,24 @@
+extends ./layout.jade
+
+block append content 
+
+    div.cart_layout_C
+         div.loadingImage
+            img(src="/images/ZZ5H.gif", alt="loadingGif")
+      div.cart_list_C  
+        table.cart_table 
+            tr.cart_headers_C 
+                th.cart_headers Product
+                th.cart_headers  Price
+                th.cart_headers  Quantity 
+                th.cart_headers  Subtotal
+    
+     div.cartTotal_C
+        div.cartTotal_text_C 
+            p carttotal: 
+        div.cartTotal_subtotal_C
+            p subtotal: 
+            p.subtotaltext
+        div.cartTotal_total
+            p total: 
+            p.totaltext

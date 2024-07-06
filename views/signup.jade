@@ -1,0 +1,35 @@
+extends ./layout.jade
+
+block append content 
+    //- block content
+    div.signUp_success_C
+        div.signUp_success_correctImage
+            img(src="/images/check-37583_1280.png", alt="")
+        div.signUp_success_text
+            p SignUp Successfully,Thanks for Joining Us
+            a(href="/signin") Go back to login Page 
+    div.validation__container_for_signup
+        form.validation_C_for_signup(action="/shop", method="post") 
+            ul
+                li.Firstname.list_input 
+                    label(for="FirstName") FirstName*
+                    input#FirstName.validation__input(type="text", name="FirstName" placeholder="FirstName") 
+                li.Lastname.list_input 
+                    label(for="LastName") LastName*
+                    input#LastName.validation__input(type="text", name="LastName" placeholder="LastName")
+                li.Email.list_input 
+                    label(for="Email") Email* 
+                    input#Email.validation__input(type="text", name="Email" placeholder="Email") 
+                li.Password.list_input
+                    label(for="Password") Password* 
+                    input#Password.validation__input(type="password",name="Password" placeholder="Password")
+                li.SubmitBtn
+                    button.signUpBtn
+                        image.signUpLoadingGif(src="/images/ZZ5H.gif")
+                        div.signupText_C
+                            i.fa.fa-sign-in 
+                            p SignUp
+            
+
+                    //- input(type="button", value="SignUp")
+    //- script(src="/javascript/db.js" type="module") 

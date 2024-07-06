@@ -1,0 +1,22 @@
+extends ./layout.jade
+
+block append footer
+
+    footer.bottom__layer 
+        div.newLetterSubmission   
+            form.newLetterForm(action="", method="post") 
+                div.newLetterInput
+                    input#newLetter(type="email", name="newLetter")
+                div.newLetterButton
+                    button.submission_btn Submit 
+
+    div.contact_C
+        div.facebook_C
+            i.fa-fa-facebook 
+        div.whatapp_C
+            i.fa-fa-whatapp 
+        div.snapchat
+            i.fa-fa-snapchat
+
+
+    

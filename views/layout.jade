@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@200;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet")
+        link(type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css")
+
+        title #{title}
+        link(rel="stylesheet", href="/stylesheet/#{csspath}")
+        link(rel="stylesheet", href="/stylesheet/main.css")
+    body 
+    div.container
+        header#topLayer 
+            nav#navBar.navBar 
+                i.fa.fa-bars(aria-hidden='true')
+            div.web__name
+                h3 Ido Furniture 
+            div.search_C    
+                form.searchSubmission(method = 'get' action = '')
+                    div.search_input
+                        input#search_input(type="search", name="" placeholder="Search for Furnitures..")
+                    div.search_btn  
+                        button#search_btn 
+                            i.fa.fa-search(aria-hidden='true')
+
+            a(href="/cart").Cart_C
+                div.Cart_text_C
+                    p.cart_text 0
+                div.Cart_icon_C
+                    i.fa.fa-shopping-cart(aria-hidden='true')
+        div.sideMenuBar_C#slideIn
+            div.times_C
+                i.fa.fa-times
+            div.sideMenuList_C
+                ul.MenuList 
+                    li.List Sofa 
+                    li.List Chairs 
+                    li.List Tables 
+                    li.List blogs 
+                    li.List Locations
+       
+            
+        block content
+        footer.bottom__layer 
+            div.newLetterSubmission 
+                p Get News From IdoFurniture  
+                form.newLetterForm(action="", method="post") 
+                    div.newLetterInput
+                        input#newLetter(type="email", name="newLetter" placeholder ="Email address")
+                    div.newLetterButton
+                        button.submission_btn Submit 
+
+            div.contact_C
+                div.facebook_C
+                    i.fa-fa-facebook 
+            div.whatapp_C
+                i.fa-fa-whatapp 
+            div.snapchat
+                i.fa-fa-snapchat
+
+                &copy; 2024
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/xdomain/0.8.2/xdomain.min.js" integrity="sha512-StNxuS/ATr0zxLMlRWenCfp1Cnsjw0p3qXMXszzrn4bj56ipqBybmYsJjlDHGmHehj7OUTRBcImkQmOMxSlEeg==" crossorigin="anonymous" referrerpolicy="no-referrer")
+     script(src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js")
+     script(src="/javascript/seqSearch.js" type="module") 
+    if javascriptpath
+    if javascriptpath != 'index.js'
+        script(src="/javascript/index.js" type="module") 
+        script(src="/javascript/#{javascriptpath}" type="module") 
+    else 
+        script(src="/javascript/index.js" type = "module") 
+    
+    
